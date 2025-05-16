@@ -2,35 +2,100 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    overflow-x: hidden;
 }
 
 header {
     background-color: #141a20;
-    padding: 5px;
-    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+    padding: 15px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 nav ul {
     list-style-type: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
     padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    position: relative;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #e7fbff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 10px 5px;
+    transition: color 0.3s ease;
+    display: block;
+}
+
+nav ul li a:hover {
+    color: #df6f2f;
+}
+
+nav ul li a.active {
+    color: #df6f2f;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #df6f2f;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+    width: 100%;
+}
+
+
+
+@media (max-width: 768px) {
+    nav ul {
+        gap: 20px;
+    }
+    
+    nav ul li a {
+        font-size: 0.9rem;
+    }
 }
 
 main {
-    min-height: calc(100vh - 120px); /* Adjust based on your header and footer heights */
+    min-height: calc(100vh - 120px);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .content h1 {
-    font-size: 3em; /* Adjust as needed */
+    font-size: 3em;
+}
+
+/* Fix for making text visible on all pages */
+main h1, main h2, main p, main div.content {
+    position: relative;
+    z-index: 1;
 }
 
 footer {
@@ -44,15 +109,30 @@ footer {
 }
 
 .container {
-    overflow: hidden;
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - 100px);
+    overflow-x: hidden;
+}
+
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .sliding-background {
     background: url("portfolio_background.png") repeat;
-    height: 1080px;
+    height: 100%;
     width: 3840px;
     background-size: 25% 50%;
     animation: slide 60s linear infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
 }
 
 @keyframes slide{
@@ -61,5 +141,124 @@ footer {
     }
     100% {
         transform: translate(-1620px);
+    }
+}
+
+/* Hero section styles */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 150px); /* Adjust for header and footer */
+}
+
+.hero-title {
+    font-size: 10rem;
+    color: aliceblue;
+    text-shadow: 5px 5px #df6f2f;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 2.5rem;
+    color: aliceblue;
+    text-shadow: 5px 5px #2f75df;
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.8rem;
+    }
+}
+
+/* About page styles */
+.about-content {
+    position: relative;
+    z-index: 1;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-grid {
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.about-image {
+    flex: 0 0 30%;
+    max-width: 300px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.about-text {
+    flex: 1;
+    color: aliceblue;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.about-text p {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.about-text p:first-child {
+    margin-top: 0;
+}
+
+/* Contact page styles */
+.contact-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.contact-links {
+    margin-top: 50px;
+}
+
+.contact-item {
+    font-size: 2rem;
+    color: aliceblue;
+    text-shadow: 3px 3px #194a94;
+    margin-bottom: 30px;
+}
+
+.contact-item a {
+    color: #df6f2f;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-item {
+        font-size: 1.5rem;
     }
 }

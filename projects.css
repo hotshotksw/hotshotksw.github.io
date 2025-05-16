@@ -1,0 +1,51 @@
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    margin-top: 0;
+}
+
+.project-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.project-item iframe {
+    width: 100%;
+    max-width: 552px;
+    height: 167px;
+}
+
+.steam-widget {
+    height: 190px;
+    max-width: 646px;
+}
+
+.portfolio-heading {
+    font-size: 1000%;
+    color: aliceblue;
+    text-shadow: 5px 5px #df6f2f;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 1200px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+} 

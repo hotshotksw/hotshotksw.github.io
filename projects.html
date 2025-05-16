@@ -4,32 +4,59 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfolio</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="main.css">
     </head>
-<body style="overflow-y:hidden;">
+<body>
     <header>
         <nav>
             <ul>
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="about.html">ABOUT</a></li>
-                <li><a href="projects.html" style="text-decoration: underline;">PORTFOLIO</a></li>
+                <li><a href="projects.html" class="active">PORTFOLIO</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <div class="container">
+        <div class="container projects-container">
             <div class="sliding-background"></div>
-            <h1 style="font-size: 1000%;color: aliceblue;text-shadow: 5px 5px #df6f2f;text-align: center;translate: 0% -610%;">PORTFOLIO</h1>
-            <iframe style="margin-top: -10vh;margin-left: 0vw;translate: 0% -650%;" frameborder="0" src="https://itch.io/embed/2228906" width="552" height="167"><a href="https://jayvlyn.itch.io/brad-to-the-bone">Brad to the Bone by jacob, Snake_EyE_12, PipoPleading, Maxmilion Flaugher, Kyle Wadas</a></iframe>
-            <iframe style="margin-top: -10vh;margin-left: 0vw;translate: 0% -350%;" frameborder="0" src="https://store.steampowered.com/widget/3512780/" frameborder="0" width="646" height="190"></iframe>
-            <iframe style="margin-top: -10vh;margin-left: 0vw;translate: 0% -650%;" frameborder="0" src="https://itch.io/embed/3153123" width="552" height="167"><a href="https://hotshotksw.itch.io/armored-cannibal">ARMORED CANNIBAL by Kyle Wadas</a></iframe>
-            <iframe style="margin-top: -10vh;margin-left: 0vw;translate: 0% -550%;" frameborder="0" src="https://itch.io/embed/2675024" width="552" height="167"><a href="https://evilpufferfish.itch.io/blood-drive">BLOOD-DRIVE (Game Jam Ver.) by Jayden Smith, Maxmilion Flaugher, Bennie, Kyle Wadas</a></iframe>
-            <iframe style="margin-top: -10vh;margin-left: 1vw;translate: 0% -550%;" frameborder="0" src="https://itch.io/embed/2549088" width="552" height="167"><a href="https://hotshotksw.itch.io/big-blast-of-ultimate-muscle">BIG BLAST OF ULTIMATE MUSCLE by Kyle Wadas, Bennie, Maxmilion Flaugher, Jayden Smith</a></iframe>
-            <iframe style="margin-top: -10vh;margin-left: 1vw;translate: 0% -550%;" frameborder="0" src="https://itch.io/embed/2714985" width="552" height="167"><a href="https://jayvlyn.itch.io/spectres-and-spirits">Spectres and Spirits by jacob, Maxmilion Flaugher, Kian Frodente, Jayden Smith, Snake_EyE_12, Kyle Wadas</a></iframe>
+            <div class="hero-content projects-hero-content">
+                <h1 class="hero-title">PORTFOLIO</h1>
+                <div class="flavor-text">
+                    <p>A collection in order of release (newest to oldest) of my game development projects and collaborations.</p>
+                </div>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-item">
+                    <iframe class="steam-widget" frameborder="0" src="https://store.steampowered.com/widget/3512780/"></iframe>
+                </div>
+
+                <div class="project-item">
+                    <iframe frameborder="0" src="https://itch.io/embed/3153123?border_width=5&amp;dark=true"><a href="https://hotshotksw.itch.io/armored-cannibal">ARMORED CANNIBAL by Kyle Wadas</a></iframe>
+                </div>
+                
+                <div class="project-item">
+                    <iframe frameborder="0" src="https://itch.io/embed/2714985?border_width=5&amp;dark=true"><a href="https://jayvlyn.itch.io/spectres-and-spirits">Spectres and Spirits by jacob, Maxmilion Flaugher, Kian Frodente, Jayden Smith, Snake_EyE_12, Kyle Wadas</a></iframe>
+                </div>
+
+                <div class="project-item">
+                    <iframe frameborder="0" src="https://itch.io/embed/2675024?border_width=5&amp;dark=true"><a href="https://evilpufferfish.itch.io/blood-drive">BLOOD-DRIVE (Game Jam Ver.) by Jayden Smith, Maxmilion Flaugher, Bennie, Kyle Wadas</a></iframe>
+                </div>
+
+                <div class="project-item">
+                    <iframe frameborder="0" src="https://itch.io/embed/2549088?border_width=5&amp;dark=true"><a href="https://hotshotksw.itch.io/big-blast-of-ultimate-muscle">BIG BLAST OF ULTIMATE MUSCLE by Kyle Wadas, Bennie, Maxmilion Flaugher, Jayden Smith</a></iframe>
+                </div>
+
+                <div class="project-item">
+                    <iframe frameborder="0" src="https://itch.io/embed/2228906?border_width=5&amp;dark=true"><a href="https://jayvlyn.itch.io/brad-to-the-bone">Brad to the Bone by jacob, Snake_EyE_12, PipoPleading, Maxmilion Flaugher, Kyle Wadas</a></iframe>
+                </div>
+                
+                <div class="project-item">
+                    <iframe frameborder="0" src="https://itch.io/embed/1145816?border_width=5&amp;dark=true"><a href="https://hotshotksw.itch.io/guidance">Guidance by Kyle Wadas</a></iframe>
+                </div>
+            </div>
         </div>
-        
-        
     </main>
     <footer>
         <p>&copy; 2025 Kyle Wadas</p>
