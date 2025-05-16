@@ -99,7 +99,7 @@ main {
 
 
 .sliding-background {
-    background: url("portfolio_background.png") repeat;
+    background: url("portfolio_background_v2.png") repeat;
     height: 100%;
     width: 3840px;
     background-size: 25% 50%;
@@ -158,7 +158,7 @@ main h1, main h2, main p, main div.content {
     font-size: 10rem;
     color: aliceblue;
     text-shadow: 5px 5px #df6f2f;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .hero-subtitle {
@@ -166,6 +166,11 @@ main h1, main h2, main p, main div.content {
     color: aliceblue;
     text-shadow: 5px 5px #2f75df;
     margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.hero-subtitle:last-of-type {
+    margin-bottom: 0;
 }
 
 /* Home Page Specific */
@@ -177,6 +182,24 @@ main h1, main h2, main p, main div.content {
 
 .home-hero-content {
     transform: translateY(-100px);
+}
+
+/* Make sure the home page flavor-text doesn't affect the title styling */
+.home-hero-content .flavor-text {
+    background-color: rgba(20, 26, 32, 0.7);
+    padding: 25px 35px;
+    border-radius: 15px;
+    margin: 0;
+}
+
+.home-hero-content .flavor-text h1,
+.home-hero-content .flavor-text h2 {
+    margin: 10px 0;
+}
+
+/* Add more spacing between consecutive h2 elements */
+.home-hero-content h2 + h2 {
+    margin-top: 25px;
 }
 
 /* Portfolio/Projects Page Styles */
@@ -276,7 +299,7 @@ main h1, main h2, main p, main div.content {
 
 .about-image {
     flex: 0 0 30%;
-    max-width: 300px;
+    max-width: 500px;
     margin-top: 0;
     padding-top: 0;
 }
