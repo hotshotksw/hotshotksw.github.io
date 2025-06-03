@@ -1,0 +1,122 @@
+.blog-container {
+    display: block;
+}
+
+.blog-hero-content {
+    min-height: auto;
+    padding: 40px 0 20px 0;
+    margin-bottom: 0;
+}
+
+.blog-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.blog-post {
+    background-color: rgba(20, 26, 32, 0.85);
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    padding: 25px;
+    color: #e7fbff;
+}
+
+.blog-post-header {
+    margin-bottom: 15px;
+}
+
+.blog-post-title {
+    font-size: 2rem;
+    color: #df6f2f;
+    margin: 0 0 10px 0;
+}
+
+.blog-post-meta {
+    font-size: 0.9rem;
+    color: #8b949e;
+    display: flex;
+    gap: 15px;
+}
+
+.blog-post-content {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.blog-post-content p {
+    margin-bottom: 15px;
+}
+
+.blog-post-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Admin Panel Styles */
+.admin-panel {
+    background-color: rgba(20, 26, 32, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    padding: 25px;
+    margin-bottom: 30px;
+    color: #e7fbff;
+}
+
+.admin-panel h2 {
+    color: #df6f2f;
+    margin-top: 0;
+}
+
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.admin-form input,
+.admin-form textarea {
+    background-color: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 10px;
+    color: #e7fbff;
+    font-size: 1rem;
+}
+
+.admin-form textarea {
+    min-height: 200px;
+    resize: vertical;
+}
+
+.admin-form button {
+    background-color: #df6f2f;
+    color: #e7fbff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.admin-form button:hover {
+    background-color: #c45a1f;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .blog-post-title {
+        font-size: 1.5rem;
+    }
+    
+    .blog-post-content {
+        font-size: 1rem;
+    }
+} 

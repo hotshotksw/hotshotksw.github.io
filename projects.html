@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfolio</title>
         <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="github-widget.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     </head>
 <body>
     <header>
@@ -28,6 +30,12 @@
             </div>
             
             <div class="projects-grid">
+                <!-- GitHub Repository Widgets -->
+                <div class="project-item">
+                    <div id="github-widget-1"></div>
+                </div>
+
+                <!-- Existing project items -->
                 <div class="project-item">
                     <iframe class="steam-widget" frameborder="0" src="https://store.steampowered.com/widget/3512780/"></iframe>
                 </div>
@@ -61,5 +69,12 @@
     <footer>
         <p>&copy; 2025 Kyle Wadas</p>
     </footer>
+    <script src="github-widget.js"></script>
+    <script>
+        // Add your GitHub repository URLs here
+        document.addEventListener('DOMContentLoaded', function() {
+            embedGitHubWidget('github-widget-1', 'https://github.com/hotshotksw/NES-Pong');
+        });
+    </script>
 </body>
 </html>

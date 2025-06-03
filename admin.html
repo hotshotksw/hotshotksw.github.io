@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin Login</title>
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="blog.css">
+    </head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="projects.html">PORTFOLIO</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="sliding-background"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">ADMIN</h1>
+                <div class="admin-panel">
+                    <h2>Login</h2>
+                    <form class="admin-form" id="login-form">
+                        <input type="password" id="admin-password" placeholder="Enter admin password" required>
+                        <button type="submit">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Kyle Wadas</p>
+    </footer>
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const password = document.getElementById('admin-password').value;
+            
+            // In a real implementation, this would be handled securely on a server
+            // For now, we'll use a simple password check
+            if (password === 'abcdefghijklmnopqrstuvwxyz') {
+                localStorage.setItem('blogAuth', 'true');
+                window.location.href = 'blog.html';
+            } else {
+                alert('Invalid password');
+            }
+        });
+    </script>
+</body>
+</html> 
